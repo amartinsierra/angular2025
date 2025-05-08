@@ -1,0 +1,16 @@
+<div class="container">
+  <table border="1" *ngIf="contactos.length>0">
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let c of contactos;let i=index">
+      <td>{{c.nombre}}</td>
+      <td>{{c.email}}</td>
+      <td>{{c.telefono}}</td>
+      <td><button (click)="eliminar(i)">Eliminar</button></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 >Clientes </h1><br><br>
+  <h3>Usuario:<input type="text" [(ngModel)]="usuario"></h3> <br>
+  <h3>Contrasena:<input type="password" [(ngModel)]="password"> </h3><br>
+
+  <button class="btn btn-info" (click)="validar()">Validar</button>
+  <button class="btn btn-info" (click)="registrese()">Regístrese</button>
+  <br>
+
+  <div *ngIf="visible">
+    <div class="form-group">
+      <label for="usr">Usuario:</label>
+      <input type="text" class="form-control" id="usr" [(ngModel)]="usuario">
+    </div>
+    <div class="form-group">
+      <label for="usr">Contrasena:</label>
+      <input type="text" class="form-control" id="usr" [(ngModel)]="password">
+    </div>
+    <div class="form-group">
+      <label for="usr">Email:</label>
+      <input type="text" class="form-control" id="usr" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <label for="usr">Teléfono:</label>
+      <input type="text" class="form-control" id="usr" [(ngModel)]="telefono">
+    </div>
+   
+    <button class="btn btn-info" (click)="registrar()">Registrar</button>
+  </div>
+</div>
