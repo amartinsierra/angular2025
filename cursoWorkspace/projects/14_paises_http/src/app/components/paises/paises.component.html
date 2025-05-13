@@ -1,20 +1,29 @@
 <div class="container">
-  <button (click)="verPaises()">Ver paises</button>
+  Seleccione  continente:
+  <select [(ngModel)]="continenteSeleccionado" (change)="cargarPaisesContinente()">
+    <option *ngFor="let t of continentes" value="{{t}}">
+      {{t}}
+    </option>
+  </select>
   <br><br>
-  <table *ngIf="paises.length>0">
-    <tr>
-      <th>Nombre</th>
-      <th>Capital</th>
-      <th>Continente</th>
-      <th>Población</th>
-      <th>Bandera</th>
-    </tr>
-    <tr *ngFor="let p of paises">
-      <td>{{p.name}}</td>
-      <td>{{p.capital}}</td>
-      <td>{{p.region}}</td>
-      <td>{{p.population}}</td>
-      <td><img src="{{p.flag}}" width="50px"></td>
-    </tr>
+  <table class="table table-striped" *ngIf="paisesContinente">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Capital</th>
+        <th>Continente</th>
+        <th>Población</th>
+        <th>Bandera</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of paisesContinente">
+        <td>{{p.name}}</td>
+        <td>{{p.capital}}</td>
+        <td>{{p.region}}</td>
+        <td>{{p.population}}</td>
+        <td><img src="{{p.flag}}" width="50px"></td>
+      </tr>
+    </tbody>
   </table>
 </div>
