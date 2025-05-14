@@ -13,6 +13,8 @@ export class PoblacionesService {
   constructor(private http:HttpClient) {
    }
   provincias():Observable<Provincia[]>{
+
+    this.http.delete
     return this.http.get<any>(this.urlProvincias)//Observable<any>
     .pipe(map(obj=>obj.provincias));//Observable<Provincia>
 
