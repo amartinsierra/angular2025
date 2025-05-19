@@ -1,0 +1,121 @@
+{
+"categorias":[
+    {
+        "idCategoria": 1,
+        "nombre": "Electrónica",
+        "proveedor": "TechWorld"
+    },
+    {
+        "idCategoria": 2,
+        "nombre": "Ropa",
+        "proveedor": "FashionStyle"
+    },
+    {
+        "idCategoria": 3,
+        "nombre": "Alimentos",
+        "proveedor": "FreshMarket"
+    },
+    {
+        "idCategoria": 4,
+        "nombre": "Juguetes",
+        "proveedor": "ToyPlanet"
+    },
+    {
+        "idCategoria": 5,
+        "nombre": "Muebles",
+        "proveedor": "HomeDeco"
+    },
+    {
+        "idCategoria": 6,
+        "nombre": "Deportes",
+        "proveedor": "SportGear"
+    }
+],
+"clientes":[
+    {
+        "nombre": "cliente1",
+        "email": "email1@gmail.com",
+        "usuario": "user1",
+        "password": "pass1"
+    },
+    {
+        "nombre": "cliente2",
+        "email": "email2@gmail.com",
+        "usuario": "user2",
+        "password": "pass2"
+    },
+    {
+        "nombre": "cliente3",
+        "email": "email3@gmail.com",
+        "usuario": "user3",
+        "password": "pass3"
+    },
+    {
+        "nombre": "cliente4",
+        "email": "email4@gmail.com",
+        "usuario": "user4",
+        "password": "pass4"
+    }
+],
+"productos":[
+    {
+        "codigo": 101,
+        "denominacion": "Smartphone",
+        "precio": 599.99,
+        "idCategoria": 1
+    },
+    {
+        "codigo": 102,
+        "denominacion": "Laptop",
+        "precio": 1099.5,
+        "idCategoria": 1
+    },
+    {
+        "codigo": 103,
+        "denominacion": "Camiseta",
+        "precio": 19.99,
+        "idCategoria": 2
+    },
+    {
+        "codigo": 104,
+        "denominacion": "Pantalón vaquero",
+        "precio": 39.99,
+        "idCategoria": 2
+    },
+    {
+        "codigo": 105,
+        "denominacion": "Chocolate negro",
+        "precio": 4.5,
+        "idCategoria": 3
+    },
+    {
+        "codigo": 106,
+        "denominacion": "Pelota de fútbol",
+        "precio": 25.75,
+        "idCategoria": 6
+    },
+    {
+        "codigo": 107,
+        "denominacion": "Muñeca",
+        "precio": 18.99,
+        "idCategoria": 4
+    },
+    {
+        "codigo": 108,
+        "denominacion": "Sofá de 3 plazas",
+        "precio": 499.99,
+        "idCategoria": 5
+    },
+    {
+        "codigo": 109,
+        "denominacion": "Auriculares inalámbricos",
+        "precio": 89.99,
+        "idCategoria": 1
+    },
+    {
+        "codigo": 110,
+        "denominacion": "Mesa de comedor",
+        "precio": 299.99,
+        "idCategoria": 5
+    }
+]}
