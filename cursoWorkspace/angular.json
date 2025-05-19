@@ -1342,6 +1342,95 @@
           }
         }
       }
+    },
+    "17_tienda": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/17_tienda",
+      "sourceRoot": "projects/17_tienda/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/17_tienda",
+            "index": "projects/17_tienda/src/index.html",
+            "browser": "projects/17_tienda/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/17_tienda/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/17_tienda/public"
+              }
+            ],
+            "styles": [
+              "projects/17_tienda/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "17_tienda:build:production"
+            },
+            "development": {
+              "buildTarget": "17_tienda:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/17_tienda/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/17_tienda/public"
+              }
+            ],
+            "styles": [
+              "projects/17_tienda/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }

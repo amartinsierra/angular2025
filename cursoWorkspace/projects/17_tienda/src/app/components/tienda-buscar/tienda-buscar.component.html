@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Seleccione categoría:</h1>
+  <select [(ngModel)]="idCategoriaSeleccionada" (change)="buscarProductos()">
+    <option *ngFor="let p of categorias" value="{{p.idCategoria}}">{{p.nombre}}</option>
+  </select>
+  <br><br><br>
+  <div *ngIf="productos">
+    <table border="1">
+      <tr>
+        <th>Denominacion </th>
+        <th>Código </th>
+        <th>Precio </th>
+        <th> </th>
+      </tr>
+      <tr *ngFor="let p of productos">
+          <td>{{p.denominacion}}</td>
+          <td>{{p.codigo}}</td>
+          <td>{{p.precio}}</td>
+          <td><button (click)="eliminarProducto(p.codigo)">Eliminar</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
