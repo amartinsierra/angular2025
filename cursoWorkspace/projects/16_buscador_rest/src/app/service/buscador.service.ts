@@ -9,15 +9,16 @@ import { Observable } from 'rxjs';
 export class BuscadorService {
 
 
-  urlBase:string = 'http://localhost:8000/buscador';
-
+  //urlBase:string = 'http://localhost:8000/buscador';
+  urlBase:string = 'http://localhost:3000/buscador';
   constructor(private http:HttpClient) { }
 
   buscar(tematica:string):Observable<Item[]>{
      /*const url_busqueda = `${this.urlBase}/buscar?tematica=${tematica}`;
      return this.http.get<Item[]>(url_busqueda);*/
      const url_busqueda = `${this.urlBase}/buscar`;
-     return this.http.get<Item[]>(url_busqueda,{params:{"tematica":tematica}});
+     //return this.http.get<Item[]>(url_busqueda,{params:{"tematica":tematica}});
+     return this.http.get<Item[]>(`${url_busqueda}/${tematica}`);
   }
 
   alta(item:Item):Observable<void>{
