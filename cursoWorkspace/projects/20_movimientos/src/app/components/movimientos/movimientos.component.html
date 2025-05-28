@@ -1,0 +1,24 @@
+<div>
+  Selecciona desde que fecha:
+  <input title="fecha1" type="date" name="fecha1" id="" [(ngModel)]="fecha1" />
+  <br /><br />
+  Selecciona hasta que fecha:
+  <input title="fecha2" type="date" name="fecha1" id="" [(ngModel)]="fecha2" />
+  <br>
+  <button title="buscar" (click)="verMovimientos()" > BUSCAR </button>
+</div>
+<div>
+  <table>
+    <thead>
+      <th>Fecha Incial: {{ fecha1 }}</th>
+      <th>Fecha Final: {{ fecha2 }}</th>
+    </thead>
+    <tbody *ngFor="let m of movimientos">
+      <td>{{ m.fecha }}</td>
+      <td>{{ m.cantidad }}</td>
+      <td>{{ m.idCuenta }}</td>
+      <td>{{ m.operacion }}</td>
+    </tbody>
+  </table>
+
+</div>
