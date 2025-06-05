@@ -1,0 +1,21 @@
+<div class="container">
+  Seleccione  curso:
+  <select [(ngModel)]="cursoSeleccionado" (change)="cargarAlumnosMatricular()">
+    <option *ngFor="let c of cursos" value="{{c.idCurso}}">
+      {{c.nombre}}
+    </option>
+  </select>
+  <br><br>
+  <div *ngIf="cursoSeleccionado">
+      Seleccione  alumno:
+    <select [(ngModel)]="alumnoSeleccionado">
+      <option *ngFor="let a of alumnosParaMatricular" value="{{a.usuario}}">
+        {{a.usuario}}
+      </option>
+    </select>
+    <br><br>
+    <button (click)="matricular();">Matricular</button>
+    <br><br>
+    <p>{{mensaje}}</p>
+  </div>
+</div>
