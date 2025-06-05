@@ -1787,6 +1787,95 @@
           }
         }
       }
+    },
+    "22_matriculaciones": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/22_matriculaciones",
+      "sourceRoot": "projects/22_matriculaciones/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/22_matriculaciones",
+            "index": "projects/22_matriculaciones/src/index.html",
+            "browser": "projects/22_matriculaciones/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/22_matriculaciones/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/22_matriculaciones/public"
+              }
+            ],
+            "styles": [
+              "projects/22_matriculaciones/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "22_matriculaciones:build:production"
+            },
+            "development": {
+              "buildTarget": "22_matriculaciones:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/22_matriculaciones/tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/22_matriculaciones/public"
+              }
+            ],
+            "styles": [
+              "projects/22_matriculaciones/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }

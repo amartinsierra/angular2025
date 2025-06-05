@@ -1,0 +1,27 @@
+<div class="main_matriculacion_container">
+  <h1>ALUMNOS MATRICULADOS</h1>
+  <div>
+    <select name="cursoSeleccionado" [(ngModel)]="idCursoSeleccionado" (change)="getAlumnosMatriculados(idCursoSeleccionado)">
+      <option *ngFor="let curso of cursos" value={{curso.idCurso}} >{{curso.nombre}}</option>
+    </select>
+  </div>
+  <br><br>
+  <div *ngIf="matriculas">
+    <table border="1" >
+      <tr>
+        <th>Nombre</th>
+        <th>Curso</th>
+        <th>Email</th>
+        <th>Nota</th>
+      </tr>
+      <tr *ngFor="let mat of matriculas">
+        <td>{{ mat.nombre}}</td>
+        <td>{{ mat.curso }}</td>
+        <td>{{mat.email}}</td>
+        <td>{{ mat.nota}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
