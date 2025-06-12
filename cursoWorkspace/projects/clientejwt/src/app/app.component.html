@@ -1,0 +1,11 @@
+<div class="container">
+  <button (click)="catalogo()">Catalogo de libros</button><br><br>
+  <table>
+    <tr><th>Isbn</th><th>Título</th><th>Precio</th></tr>
+    <tr *ngFor="let lb of libros">
+      <td>{{lb.isbn}}</td>
+       <td>{{lb.titulo}}</td>
+        <td>{{lb.precio}}</td>
+    </tr>
+  </table>
+</div>
