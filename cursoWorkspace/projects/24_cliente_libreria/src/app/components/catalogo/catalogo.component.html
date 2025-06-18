@@ -1,0 +1,8 @@
+<div>
+    <h2>Catálogo de Libros</h2>
+    <ul>
+      <li *ngFor="let libro of libros">
+        {{ libro.titulo }} - {{ libro.autor }} - {{libro.precio}}€
+      </li>
+    </ul>
+</div>

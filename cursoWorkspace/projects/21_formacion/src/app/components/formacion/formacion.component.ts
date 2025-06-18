@@ -20,10 +20,12 @@ export class FormacionComponent {
   mensaje:string;
   constructor(private formacionService:FormacionService){
     this.formacionService.buscarCursos().subscribe(data=>this.cursos=data);
+
   }
   cargarAlumnosMatricular(){
     this.formacionService.buscarAlumnosNoMatriculadosenCurso(this.cursoSeleccionado)
     .subscribe(data=>this.alumnosParaMatricular=data);
+    
   }
   matricular(){
     const matricula:Matricula=new Matricula(this.cursoSeleccionado,this.alumnoSeleccionado);

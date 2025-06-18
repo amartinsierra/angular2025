@@ -1,0 +1,17 @@
+<div class="container">
+  <table class="table">
+    <tr>
+      <td><a [routerLink]="['/catalogo']" routerLinkActive="router-link-active" >Catálogo de libros</a></td>
+      <td><a [routerLink]="['/compras']" routerLinkActive="router-link-active" >Mis compras</a></td>
+
+    </tr>
+  </table>
+
+
+
+  <br><br>
+  <router-outlet>
+    <app-login></app-login>
+  </router-outlet>
+
+</div>

@@ -1,0 +1,13 @@
+<div>
+    <label for="usuario">Usuario:</label>
+    <input id="usuario" type="text" [(ngModel)]="usuario" />
+
+    <label for="password">Contraseña:</label>
+    <input id="password" type="password" [(ngModel)]="password" />
+
+    <button (click)="login()">Validar</button>
+
+    <div>
+      {{mensaje}}
+    </div>
+  </div>
