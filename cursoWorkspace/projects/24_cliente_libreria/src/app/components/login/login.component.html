@@ -1,13 +1,33 @@
+
 <div>
+  <form #flogin="ngForm" (ngSubmit)="login()" >
     <label for="usuario">Usuario:</label>
-    <input id="usuario" type="text" [(ngModel)]="usuario" />
+    <input
+      id="usuario"
+      type="text"
+      name="usuario"
+      [(ngModel)]="usuario"
+      #usuarioCtrl="ngModel"
+      required
+      minlength="3"
+    />
+
 
     <label for="password">Contraseña:</label>
-    <input id="password" type="password" [(ngModel)]="password" />
+    <input
+      id="password"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      #passwordCtrl="ngModel"
+      required
+    />
 
-    <button (click)="login()">Validar</button>
 
-    <div>
-      {{mensaje}}
-    </div>
-  </div>
+    <button type="submit" [disabled]="flogin.invalid">Validar</button>
+  </form>
+</div>
+
+<div>
+  {{ mensaje }}
+</div>

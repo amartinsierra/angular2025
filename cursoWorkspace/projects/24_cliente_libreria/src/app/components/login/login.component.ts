@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { LibreriaService } from '../../service/libreria.service';
 import { Cliente } from '../../model/Cliente';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
