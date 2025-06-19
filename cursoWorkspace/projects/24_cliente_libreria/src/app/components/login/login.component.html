@@ -1,33 +1,22 @@
 
 <div>
-  <form #flogin="ngForm" (ngSubmit)="login()" >
+  <form #flogin="ngForm" name="flogin">
     <label for="usuario">Usuario:</label>
-    <input
-      id="usuario"
-      type="text"
-      name="usuario"
-      [(ngModel)]="usuario"
-      #usuarioCtrl="ngModel"
-      required
-      minlength="3"
-    />
-
-
+    <input id="us" type="text" name="us" #usuarioP="ngModel"  [(ngModel)]="usuario" minlength="3" required="true">
+    <p *ngIf="usuarioP.invalid&&usuarioP.touched">
+      usuario no válido
+    </p>
     <label for="password">Contraseña:</label>
-    <input
-      id="password"
-      type="password"
-      name="password"
-      [(ngModel)]="password"
-      #passwordCtrl="ngModel"
-      required
-    />
+    <input id="pass" name="pass" type="password" #passwordP="ngModel" [(ngModel)]="password"  required="true" >
 
-
-    <button type="submit" [disabled]="flogin.invalid">Validar</button>
+    <label for="email">Email:</label>
+    <input id="em" name="em" type="text" #emailP="ngModel" [(ngModel)]="email" email="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  required="true" >
+    <div *ngIf="emailP.invalid && emailP.touched">
+      <small >Email no válido.</small>
+    </div>
+    <button type="button" (click)="login(flogin)" >Validar</button>
   </form>
-</div>
-
-<div>
-  {{ mensaje }}
-</div>
+    <div>
+      {{mensaje}}
+    </div>
+  </div>

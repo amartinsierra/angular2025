@@ -13,10 +13,15 @@ import { CommonModule } from '@angular/common';
 export class LoginComponent {
   usuario:string;
   password:string;
+  email:string;
   mensaje:string;
   constructor(private libreriaService:LibreriaService){}
 
-  login(){
+  login(form){
+    if(form.invalid){
+      alert("Los datos del formulario no son válidos!!!");
+      return;
+    }
     this.libreriaService.autentificar(this.usuario,this.password)
     .subscribe(data=>{
       if(data){
