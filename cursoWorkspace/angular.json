@@ -1635,6 +1635,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/20_movimientos/src/styles.css"
             ],
             "scripts": []
@@ -1693,6 +1694,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/20_movimientos/src/styles.css"
             ],
             "scripts": []
@@ -2080,6 +2082,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/24_cliente_libreria/src/styles.css"
             ],
             "scripts": []
@@ -2138,6 +2141,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "projects/24_cliente_libreria/src/styles.css"
             ],
             "scripts": []
