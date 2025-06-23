@@ -15,7 +15,7 @@ describe('AgendaService', () => {
     expect(service).toBeTruthy();
   });
   it('devolver 1', () => {
-    service.guardar(new Contacto("a","e","t");
+    service.guardar(new Contacto("a","e","t"));
     expect(service.recuperar().length).toBe(1);
   });
 });
