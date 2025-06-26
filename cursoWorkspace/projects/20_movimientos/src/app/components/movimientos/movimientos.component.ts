@@ -11,9 +11,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { FechaPersonalPipe } from "../../pipes/fecha-personal.pipe";
 @Component({
   selector: 'app-movimientos',
-  imports: [FormsModule,CommonModule,MatTableModule,MatPaginatorModule,MatSortModule,MatButtonModule,MatInputModule],
+  imports: [FormsModule, CommonModule, MatTableModule, MatPaginatorModule, MatSortModule, MatButtonModule, MatInputModule, FechaPersonalPipe],
   templateUrl: './movimientos.component.html',
   styleUrl: './movimientos.component.css'
 })

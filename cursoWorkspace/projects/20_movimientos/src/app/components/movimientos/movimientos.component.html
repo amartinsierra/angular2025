@@ -11,7 +11,7 @@
   <table  mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
         <ng-container matColumnDef="Fecha">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha</th>
-          <td mat-cell *matCellDef="let m">{{m.fecha|date}}</td>
+          <td mat-cell *matCellDef="let m">{{m.fecha|fechaPersonal}}</td>
         </ng-container>
         <ng-container matColumnDef="Cantidad">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Cantidad</th>
