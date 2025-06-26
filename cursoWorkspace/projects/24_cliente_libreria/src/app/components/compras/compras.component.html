@@ -2,7 +2,7 @@
   <h2>Mis Compras</h2>
   <ul>
     <li *ngFor="let compra of compras">
-      {{ compra.tituloLibro }} - {{ compra.fechaCompra }}
+      {{ compra.tituloLibro }} - {{ compra.fechaCompra|fecha }}
     </li>
   </ul>
 </div>
